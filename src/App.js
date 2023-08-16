@@ -11,7 +11,7 @@ function App() {
     )
       .then((responce) => responce.json())
       .then((data) => {
-        console.log(data);
+        console.log(data,"this is data");
         setRecord(data.results);
       });
   };
