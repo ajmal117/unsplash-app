@@ -23,7 +23,7 @@ function App() {
         <input
           style={{ width: "55%" }}
           type="text"
-          placeholder="write item name"
+          placeholder="write item name ..."
           onChange={(e) => setValue(e.target.value)}
         />
         <button onClick={() => handleSubmit()}>Find</button>
