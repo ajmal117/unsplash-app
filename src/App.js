@@ -5,13 +5,13 @@ function App() {
   const [value, setValue] = useState("");
   const [record, setRecord] = useState([]);
 
-  const handleSubmit =  () => {
+  const handleSubmit = () => {
     fetch(
       `https://api.unsplash.com/search/photos/?client_id=ge_ibnzzKE2mOPqbhwfBO796f8pPw5XoJNywqRP7ljY&query=${value}&orientation=squarish`
     )
       .then((responce) => responce.json())
       .then((data) => {
-        console.log(data,"this is data");
+        console.log(data, "this is data");
         setRecord(data.results);
       });
   };
@@ -28,11 +28,20 @@ function App() {
         />
         <button onClick={() => handleSubmit()}>Find</button>
       </div>
+      <div>
+        <h3>Note:</h3>
+        <p>This is clone website of unsplash created by Ajmal Ali</p>
+      </div>
       <div className="gallery">
         {record.map((item) => {
           return (
             <>
-              <img className="item" key={item.id} src={item.urls.regular} alt='images'/>
+              <img
+                className="item"
+                key={item.id}
+                src={item.urls.regular}
+                alt="images"
+              />
             </>
           );
         })}
