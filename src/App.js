@@ -28,7 +28,7 @@ function App() {
         />
         <button onClick={() => handleSubmit()}>Find</button>
       </div>
-      <div>
+      <div style={{ display: "flex",alignItems:"center", justifyContent: "center", gap: "10px" }}>
         <h3>Note:</h3>
         <p>This is clone website of unsplash created by Ajmal Ali</p>
       </div>
